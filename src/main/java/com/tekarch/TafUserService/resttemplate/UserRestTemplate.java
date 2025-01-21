@@ -16,7 +16,7 @@ public class UserRestTemplate {
     private final String BASE_URL="http://localhost:8083/api";
 
     public UserResponse createFlight(UserRequest requestUser){
-        String url=BASE_URL+" /users/register";
+        String url=BASE_URL+"/users/register";
         UserResponse response = restTemplate.postForObject(url,requestUser, UserResponse.class);
         System.out.println("User response:"+response);
         return response;
